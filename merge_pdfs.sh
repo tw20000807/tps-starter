@@ -5,9 +5,9 @@ PROBLEMS=$(python3 -c 'import json, os; print(" ".join(json.loads(os.environ.get
 
 MERGECMD="pdfunite "
 
-if [-f "cover.tex"]; then
+if [ -f "cover.tex" ]; then
 	xelatex cover.tex
-	MERGECMD = "$MERGECMD cover.pdf"
+	MERGECMD="$MERGECMD cover.pdf"
 fi
 
 for prob in $PROBLEMS; do
@@ -16,12 +16,12 @@ for prob in $PROBLEMS; do
 	fi
 done
 
-if [-f "appendix.tex"]; then
+if [ -f "appendix.tex" ]; then
 	xelatex appendix.tex
-	MERGECMD = "$MERGECMD appendix.pdf"
+	MERGECMD="$MERGECMD appendix.pdf"
 fi
 
-MERGECMD="$MERGECMD pA/attachments/problems.pdf"
+MERGECMD="$MERGECMD problems.pdf"
 echo $MERGECMD
 mkdir -p attachments
 $MERGECMD
