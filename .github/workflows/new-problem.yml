@@ -3,11 +3,12 @@ name: New problem
 on:
   workflow_dispatch:
     inputs:
-      count:
-        description: 'How many problems in this contest?'
+      name:
+        description: 'problem name? (only allow a-z and A-Z)'
+        required: true
 
 jobs:
   run:
-    uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/new-problem.yml@main
+    uses: tw20000807/tps-actions/.github/workflows/new-problem.yml@main
     with:
-      count: ${{ fromJson(github.event.inputs.count) }}
+      name: ${{ github.event.inputs.name }}

@@ -5,9 +5,9 @@ on:
     branches:
       - '**'
     paths:
-      - 'p*/**'
+      - '*/**'
   workflow_dispatch:
 
 jobs:
   run:
-    uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/generate-report.yml@main
+    uses: tw20000807/tps-actions/.github/workflows/generate-report.yml@main

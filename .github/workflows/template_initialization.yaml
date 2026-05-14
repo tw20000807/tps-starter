@@ -10,7 +10,7 @@ on:
 jobs:
   template_initialization:
     runs-on: ubuntu-latest
-    if: ${{ github.event.created && github.repository != 'TNFSH-Programming-Contest/tps-starter' }}
+    if: ${{ github.event.created && github.repository != 'tw20000807/tps-starter' }}
     steps:
 
       - uses: actions/checkout@v3
@@ -44,7 +44,7 @@ jobs:
 
   debug:
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'TNFSH-Programming-Contest/tps-starter' }}
+    if: ${{ github.repository == 'tobiichi3227/tps-starter' }}
     steps:
       - name: Show envs
         run: env

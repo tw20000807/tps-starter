@@ -5,7 +5,7 @@ on:
     branches:
       - '**'
     paths:
-      - 'p*/**'
+      - '*/**'
   workflow_dispatch:
     inputs:
       problems:
@@ -13,6 +13,6 @@ on:
 
 jobs:
   run:
-    uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/tps-verify.yml@main
+    uses: tw20000807/tps-actions/.github/workflows/tps-verify.yml@main
     with:
       problems: ${{ github.event.inputs.problems }}
